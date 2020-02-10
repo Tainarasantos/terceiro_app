@@ -31,5 +31,8 @@ class PaginasEstaticasControllerTest < ActionDispatch::IntegrationTest
     assert_select "title" , "Contato | #{@titulo_base}"
 
   end
-
-end
+  test "should get root" do
+    get root_url
+    assert_response :success
+    end
+  end
